@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f3019de-cf3e-4332-beb3-3ddb9ba83a68" name="Default Changelist" comment="" />
+    <list default="true" id="0f3019de-cf3e-4332-beb3-3ddb9ba83a68" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/pojo/Arrange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/pojo/Batch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/pojo/College.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/pojo/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/pojo/Degree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/pojo/Details.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/pojo/Disciplinary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/pojo/Discipline.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/pojo/Examcourse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/pojo/Examdate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/pojo/Examtime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/pojo/Invigilation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/pojo/Native.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/pojo/Profession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/pojo/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/pojo/Room.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/pojo/Sticker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/pojo/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/pojo/Surface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/pojo/Taskplan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/pojo/Teacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/pojo/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/pojo/test.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,6 +37,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -36,6 +63,7 @@
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
   <component name="ProjectId" id="1X9CYP335blZHlSnQOfOf6yAUWv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -45,11 +73,23 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/pojo" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="edu.hbuas.examsystem.config" />
+      <recent name="edu.hbuas.examsystem.controller" />
+      <recent name="edu.hbuas.examsystem.mapper" />
+      <recent name="edu.hbuas.examsystem.pojo" />
+      <recent name="edu.hbuas.examsystem.realm" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\IDEA-Project\examsystem\src\main\java\edu\hbuas\examsystem\pojo" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="ExamsystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -82,17 +122,50 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1580448969059</updated>
-      <workItem from="1580448972801" duration="328000" />
+      <workItem from="1580448972801" duration="1841000" />
+      <workItem from="1580627680846" duration="717000" />
     </task>
+    <task id="LOCAL-00001" summary="考试系统项目目录结构">
+      <created>1580449514093</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1580449514093</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="考试系统项目目录结构" />
+    <option name="LAST_COMMIT_MESSAGE" value="考试系统项目目录结构" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="488" y="57" key="#com.intellij.ide.util.MemberChooser" timestamp="1580628279614">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="57" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1580628279614" />
+    <state x="182" y="0" key="CommitChangelistDialog2" timestamp="1580449510875">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="182" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1580449510875" />
     <state x="463" y="108" key="FileChooserDialogImpl" timestamp="1580449437419">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="108" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1580449437419" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1580449690600">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1580449690600" />
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1580449542745">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1580449542745" />
+    <state x="375" y="166" key="git4idea.merge.GitPullDialog" timestamp="1580627721647">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="375" y="166" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1580627721647" />
   </component>
 </project>
