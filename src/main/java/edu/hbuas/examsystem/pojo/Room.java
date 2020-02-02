@@ -72,4 +72,17 @@ public class Room implements Serializable {
     public void setStorid(Integer storid) {
         this.storid = storid;
     }
+
+    @Override
+    public String toString() {
+        return "Room{" +
+                "rrid=" + rrid +
+                ", tid=" + tid +
+                ", rid=" + rid +
+                ", place='" + place + '\'' +
+                ", number='" + number + '\'' +
+                ", campus=" + campus +
+                ", storid=" + storid +
+                '}';
+    }
 }

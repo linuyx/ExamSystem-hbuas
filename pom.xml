@@ -88,12 +88,12 @@
             <version>1.1.21</version>
         </dependency>
 
-        <!--springboot和shiro整合-->
-        <dependency>
-            <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-spring-boot-web-starter</artifactId>
-            <version>1.5.0</version>
-        </dependency>
+<!--        &lt;!&ndash;springboot和shiro整合&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.shiro</groupId>-->
+<!--            <artifactId>shiro-spring-boot-web-starter</artifactId>-->
+<!--            <version>1.5.0</version>-->
+<!--        </dependency>-->
 
     </dependencies>
 
