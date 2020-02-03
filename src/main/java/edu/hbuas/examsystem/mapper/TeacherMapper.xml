@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="edu.hbuas.examsystem.mapper.TeacherMapper">
+
+    <!--查询所有teacher-->
+    <select id="findAllTeachaer" resultType="teacher">
+        SELECT  number,tname,sex,wages,phone,college,times FROM  teacher,college
+        WHERE
+         teacher.cid=college.cid
+    </select>
+
+    <!--查询teacher根据number-->
+    <select id="findTeacherByNumber" parameterType="string" resultType="teacher">
+        select * from teacher where number=#{number}
+    </select>
+
+    <!--批量删除teacher根据number-->
+    <delete id="deleteTeacherByNumber" parameterType="teacher">
+        delete from teacher where in
+        <foreach collection="lists" item="list" open="(" close=")" separator=",">
+            #{list.number}
+        </foreach>
+    </delete>
+
+    <!--保存teacher-->
+    <insert id="saveTeacher" parameterType="teacher">
+        insert  into teacher (number,tname,sex,wages,phone,cid,rid)
+        values
+        (#{number},#{tname},#{sex},#{wages},#{phone},#{cid},#{rid})
+    </insert>
+
+</mapper>

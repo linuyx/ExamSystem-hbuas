@@ -21,6 +21,10 @@ public class Teacher implements Serializable {
 
     private Integer times;
 
+    private String college;
+
+    private String rname;
+
     public Integer getTid() {
         return tid;
     }
@@ -91,5 +95,38 @@ public class Teacher implements Serializable {
 
     public void setTimes(Integer times) {
         this.times = times;
+    }
+
+    public String getCollege() {
+        return college;
+    }
+
+    public void setCollege(String college) {
+        this.college = college;
+    }
+
+    public String getRname() {
+        return rname;
+    }
+
+    public void setRname(String rname) {
+        this.rname = rname;
+    }
+
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "tid=" + tid +
+                ", number='" + number + '\'' +
+                ", tname='" + tname + '\'' +
+                ", sex='" + sex + '\'' +
+                ", wages='" + wages + '\'' +
+                ", phone='" + phone + '\'' +
+                ", cid=" + cid +
+                ", rid=" + rid +
+                ", times=" + times +
+                ", college='" + college + '\'' +
+                ", rname='" + rname + '\'' +
+                '}';
     }
 }

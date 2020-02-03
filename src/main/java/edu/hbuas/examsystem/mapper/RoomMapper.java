@@ -13,5 +13,8 @@ public interface RoomMapper {
     List<Room> findAllRoom();
 
     //导入所有考场信息
-    void insertAllRoom(@Param("list") List<Room> list);
+    void insertAllRoom(@Param("lists") List<Room> lists);
+
+    //批量删除room通过rrid
+    void deleteManyRoomByRrid(@Param("lists") List<Room> lists);
 }

@@ -11,5 +11,8 @@ public interface RoomService {
     List<Room> findAllRoom();
 
     //导入所有考场信息
-    void insertAllRoom(List<Room> list);
+    void insertAllRoom(List<Room> lists);
+
+    //批量删除room通过rrid
+    void deleteManyRoomByRrid(List<Room> lists);
 }

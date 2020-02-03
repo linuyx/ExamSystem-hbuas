@@ -27,7 +27,13 @@ public class RoomController {
 
     //导入所有考场信息
     @RequestMapping("/insertAllRoom")
-    public void insertAllRoom(List<Room> list){
-        roomService.insertAllRoom(list);
+    public void insertAllRoom(List<Room> lists){
+        roomService.insertAllRoom(lists);
+    }
+
+    //批量删除room通过rrid
+    @RequestMapping("/deleteManyRoomByNumber")
+    public void deleteManyRoomByRrid(List<Room> lists){
+        roomService.deleteManyRoomByRrid(lists);
     }
 }

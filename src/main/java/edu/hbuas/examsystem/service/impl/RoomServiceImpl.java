@@ -23,7 +23,13 @@ public class RoomServiceImpl implements RoomService {
 
     //导入所有考场信息
     @Transactional
-    public void insertAllRoom(List<Room> list){
-        roomMapper.insertAllRoom(list);
+    public void insertAllRoom(List<Room> lists){
+        roomMapper.insertAllRoom(lists);
+    }
+
+    //批量删除room通过rrid
+    @Transactional
+    public void deleteManyRoomByRrid(List<Room> lists){
+        roomMapper.deleteManyRoomByRrid(lists);
     }
 }

@@ -6,16 +6,24 @@
 <mapper namespace="edu.hbuas.examsystem.mapper.RoomMapper">
 
     <!--查询所有room-->
-    <select id="findAllRoom" resultType="Room">
+    <select id="findAllRoom" resultType="room">
         select * from room
     </select>
 
     <!--导入所有考场信息-->
-    <insert id="insertAllRoom" parameterType="Room">
+    <insert id="insertAllRoom" parameterType="room">
         insert into room (tid,rid,place,number,campus,storid)
         values
-        <foreach collection="list" item="item" separator=",">
-            (#{item.tid},#{item.rid},#{item.place},#{item.number},#{item.campus},#{item.storid})
+        <foreach collection="lists" item="list" separator=",">
+            (#{list.tid},#{list.rid},#{list.place},#{list.number},#{list.campus},#{list.storid})
         </foreach>
     </insert>
+    
+    <!--批量删除room通过rrid-->
+    <delete id="deleteManyRoomByRrid" parameterType="room">
+        delete from room where rrid in
+        <foreach collection="lists" item="list" open="(" close=")" separator=",">
+            #{list.rrid}
+        </foreach>
+    </delete>
 </mapper>
