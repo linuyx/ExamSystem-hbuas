@@ -7,29 +7,50 @@
 
     <!--查询所有teacher-->
     <select id="findAllTeachaer" resultType="teacher">
-        SELECT  number,tname,sex,wages,phone,college,times FROM  teacher,college
+        SELECT  number,tname,sex,wages,phone,college,rname,times FROM  teacher,college,role
         WHERE
-         teacher.cid=college.cid
+         teacher.cid=college.cid  and teacher.rid=role.rid
     </select>
 
-    <!--查询teacher根据number-->
-    <select id="findTeacherByNumber" parameterType="string" resultType="teacher">
-        select * from teacher where number=#{number}
+    <!--查询teacher多条件-->
+    <select id="findTeacherByMany" parameterType="teacher" resultType="teacher">
+        select number,tname,sex,wages,phone,college,rname,times from teacher,college,role
+        where
+        teacher.cid=#{cid} and tname=#{tname} and teacher.rid=#{rid}
+        and teacher.cid=college.cid and teacher.rid=role.rid
     </select>
 
     <!--批量删除teacher根据number-->
     <delete id="deleteTeacherByNumber" parameterType="teacher">
-        delete from teacher where in
+        delete from teacher where number in
         <foreach collection="lists" item="list" open="(" close=")" separator=",">
             #{list.number}
         </foreach>
     </delete>
 
     <!--保存teacher-->
-    <insert id="saveTeacher" parameterType="teacher">
-        insert  into teacher (number,tname,sex,wages,phone,cid,rid)
+    <insert id="insertTeacher" parameterType="teacher">
+        insert  into teacher (number,tname,sex,wages,phone,cid,rid,times)
         values
-        (#{number},#{tname},#{sex},#{wages},#{phone},#{cid},#{rid})
+        (#{number},#{tname},#{sex},#{wages},#{phone},#{cid},#{rid},#{times})
     </insert>
+
+    <!--批量导入teacher-->
+    <insert id="insertAllTeacher" parameterType="teacher">
+        insert  into teacher (number,tname,sex,wages,phone,cid,rid,times)
+        values
+        <foreach collection="lists" item="list" separator=",">
+        (#{list.number},#{list.tname},#{list.sex},#{list.wages},
+        #{list.phone},#{list.cid},#{list.rid},#{list.times})
+        </foreach>
+    </insert>
+
+    <!--修改teacher通过number-->
+    <update id="updateTeacher" parameterType="teacher">
+        update teacher set tname=#{tname},sex=#{sex},wages=#{wages},
+        phone=#{phone},cid=#{cid},rid=#{rid},times=#{times}
+        where
+        number=#{number}
+    </update>
 
 </mapper>

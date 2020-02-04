@@ -2,31 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f3019de-cf3e-4332-beb3-3ddb9ba83a68" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/controller/TeacherController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/mapper/TeacherMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/mapper/TeacherMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/service/TeacherService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/service/impl/TeacherServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/examsystem.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/controller/TeacherController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/mapper/TeacherMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/mapper/TeacherMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/service/TeacherService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/service/impl/TeacherServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/mapper/CollegeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/mapper/CollegeMappere.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/mapper/RoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/mapper/RoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/mapper/CollegeMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/mapper/CollegeMappere.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/mapper/RoleMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/mapper/RoleMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/controller/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/controller/RoomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/mapper/RoomMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/mapper/RoomMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/mapper/RoomMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/mapper/RoomMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/pojo/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/pojo/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/service/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/service/RoomService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/service/impl/RoomServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/service/impl/RoomServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/controller/TeacherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/mapper/TeacherMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/mapper/TeacherMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/mapper/TeacherMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/mapper/TeacherMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/service/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/service/TeacherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/service/impl/TeacherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/hbuas/examsystem/service/impl/TeacherServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/edu/hbuas/examsystem/ExamsystemApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/hbuas/examsystem/ExamsystemApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/controller/RoomController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/controller/RoomController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/mapper/RoomMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/mapper/RoomMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/controller/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/controller/TeacherController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/mapper/RoomMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/mapper/RoomMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/pojo/Teacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/pojo/Teacher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/service/RoomService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/service/RoomService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/service/impl/RoomServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/service/impl/RoomServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/mapper/TeacherMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/mapper/TeacherMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/mapper/TeacherMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/mapper/TeacherMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/service/TeacherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/service/TeacherService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/service/impl/TeacherServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/hbuas/examsystem/service/impl/TeacherServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/edu/hbuas/examsystem/ExamsystemApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/edu/hbuas/examsystem/ExamsystemApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,8 +34,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -105,8 +101,8 @@
       <recent name="F:\IDEA-Project\examsystem\src\main\java\edu\hbuas\examsystem\pojo" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ExamsystemApplicationTests.testFindAllTeachaer">
-    <configuration name="ExamsystemApplicationTests.deleteManyRoomByRrid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ExamsystemApplicationTests.testDeleteTeacherByNumber">
+    <configuration name="ExamsystemApplicationTests.insertAllTeacher" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="examsystem" />
       <extension name="coverage">
         <pattern>
@@ -116,13 +112,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="edu.hbuas.examsystem" />
       <option name="MAIN_CLASS_NAME" value="edu.hbuas.examsystem.ExamsystemApplicationTests" />
-      <option name="METHOD_NAME" value="deleteManyRoomByRrid" />
+      <option name="METHOD_NAME" value="insertAllTeacher" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExamsystemApplicationTests.testFindAllRoom" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ExamsystemApplicationTests.testDeleteTeacherByNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="examsystem" />
       <extension name="coverage">
         <pattern>
@@ -132,13 +128,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="edu.hbuas.examsystem" />
       <option name="MAIN_CLASS_NAME" value="edu.hbuas.examsystem.ExamsystemApplicationTests" />
-      <option name="METHOD_NAME" value="testFindAllRoom" />
+      <option name="METHOD_NAME" value="testDeleteTeacherByNumber" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExamsystemApplicationTests.testFindAllTeachaer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ExamsystemApplicationTests.testInsertTeacher" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="examsystem" />
       <extension name="coverage">
         <pattern>
@@ -148,13 +144,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="edu.hbuas.examsystem" />
       <option name="MAIN_CLASS_NAME" value="edu.hbuas.examsystem.ExamsystemApplicationTests" />
-      <option name="METHOD_NAME" value="testFindAllTeachaer" />
+      <option name="METHOD_NAME" value="testInsertTeacher" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExamsystemApplicationTests.testInsertAllRoom" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ExamsystemApplicationTests.testSaveTeacher" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="examsystem" />
       <extension name="coverage">
         <pattern>
@@ -164,7 +160,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="edu.hbuas.examsystem" />
       <option name="MAIN_CLASS_NAME" value="edu.hbuas.examsystem.ExamsystemApplicationTests" />
-      <option name="METHOD_NAME" value="testInsertAllRoom" />
+      <option name="METHOD_NAME" value="testSaveTeacher" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExamsystemApplicationTests.updateTeacher" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="examsystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.hbuas.examsystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.hbuas.examsystem" />
+      <option name="MAIN_CLASS_NAME" value="edu.hbuas.examsystem.ExamsystemApplicationTests" />
+      <option name="METHOD_NAME" value="updateTeacher" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -179,10 +191,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ExamsystemApplicationTests.testFindAllTeachaer" />
-        <item itemvalue="JUnit.ExamsystemApplicationTests.deleteManyRoomByRrid" />
-        <item itemvalue="JUnit.ExamsystemApplicationTests.testInsertAllRoom" />
-        <item itemvalue="JUnit.ExamsystemApplicationTests.testFindAllRoom" />
+        <item itemvalue="JUnit.ExamsystemApplicationTests.testDeleteTeacherByNumber" />
+        <item itemvalue="JUnit.ExamsystemApplicationTests.insertAllTeacher" />
+        <item itemvalue="JUnit.ExamsystemApplicationTests.testInsertTeacher" />
+        <item itemvalue="JUnit.ExamsystemApplicationTests.updateTeacher" />
+        <item itemvalue="JUnit.ExamsystemApplicationTests.testSaveTeacher" />
       </list>
     </recent_temporary>
   </component>
@@ -212,7 +225,8 @@
       <workItem from="1580627680846" duration="3449000" />
       <workItem from="1580644142911" duration="9016000" />
       <workItem from="1580711522145" duration="686000" />
-      <workItem from="1580717733068" duration="19038000" />
+      <workItem from="1580717733068" duration="19096000" />
+      <workItem from="1580805611263" duration="14179000" />
     </task>
     <task id="LOCAL-00001" summary="考试系统项目目录结构">
       <created>1580449514093</created>
@@ -235,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580655189043</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="提交room和teacher一部分功能">
+      <created>1580743298541</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1580743298541</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,7 +266,8 @@
     <MESSAGE value="考试系统项目目录结构" />
     <MESSAGE value="提交服务端pojo" />
     <MESSAGE value="提交room的查询所有和批量导入功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交room的查询所有和批量导入功能" />
+    <MESSAGE value="提交room和teacher一部分功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交room和teacher一部分功能" />
   </component>
   <component name="WindowStateProjectService">
     <state x="488" y="57" key="#com.intellij.ide.util.MemberChooser" timestamp="1580740193231">
@@ -256,30 +278,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="114" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1580740205452" />
-    <state x="182" y="0" key="CommitChangelistDialog2" timestamp="1580655184484">
+    <state x="182" y="0" key="CommitChangelistDialog2" timestamp="1580824730206">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="182" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1580655184484" />
+    <state x="182" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1580824730206" />
     <state x="463" y="108" key="FileChooserDialogImpl" timestamp="1580726110539">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="108" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1580726110539" />
-    <state width="1323" height="171" key="GridCell.Tab.0.bottom" timestamp="1580741896993">
+    <state width="1323" height="171" key="GridCell.Tab.0.bottom" timestamp="1580824669756">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="171" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1580741896993" />
-    <state width="1323" height="171" key="GridCell.Tab.0.center" timestamp="1580741896992">
+    <state width="1323" height="171" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1580824669756" />
+    <state width="1323" height="171" key="GridCell.Tab.0.center" timestamp="1580824669756">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="171" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1580741896992" />
-    <state width="1323" height="171" key="GridCell.Tab.0.left" timestamp="1580741896992">
+    <state width="1323" height="171" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1580824669756" />
+    <state width="1323" height="171" key="GridCell.Tab.0.left" timestamp="1580824669755">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="171" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1580741896992" />
-    <state width="1323" height="171" key="GridCell.Tab.0.right" timestamp="1580741896992">
+    <state width="1323" height="171" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1580824669755" />
+    <state width="1323" height="171" key="GridCell.Tab.0.right" timestamp="1580824669756">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="171" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1580741896992" />
+    <state width="1323" height="171" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1580824669756" />
     <state width="1323" height="171" key="GridCell.Tab.1.bottom" timestamp="1580655310259">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -300,10 +322,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1580449690600" />
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1580655217187">
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1580743305668">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1580655217187" />
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1580743305668" />
     <state x="375" y="166" key="git4idea.merge.GitPullDialog" timestamp="1580655276712">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

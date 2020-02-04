@@ -7,6 +7,7 @@ import edu.hbuas.examsystem.pojo.Teacher;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -95,7 +96,108 @@ class ExamsystemApplicationTests {
         for(Teacher teacher:lists){
             System.out.println(teacher);
         }
-
-
     }
+
+
+    //测试保存用户
+    @Test
+    public void testInsertTeacher(){
+        Teacher teacher=new Teacher();
+
+        teacher.setNumber("twww");
+        teacher.setTname("test");
+        teacher.setSex("男");
+        teacher.setWages("123456789");
+        teacher.setPhone("123456789");
+        teacher.setCollege("马克思主义学院");
+        teacher.setRname("教师");
+        teacher.setTimes(0);
+
+        teacherController.insertTeacher(teacher);
+    }
+
+    //测试删除用户
+    @Test
+    public void testDeleteTeacherByNumber(){
+        Teacher teacher1=new Teacher();
+        Teacher teacher2=new Teacher();
+        Teacher teacher3=new Teacher();
+
+
+        teacher1.setNumber("txxx2");
+        teacher2.setNumber("");
+        teacher3.setNumber("");
+
+        List<Teacher> lists=new ArrayList<>();
+
+        lists.add(teacher1);
+        lists.add(teacher2);
+        lists.add(teacher3);
+
+        teacherController.deleteTeacherByNumber(lists);
+    }
+
+
+    //测试teacher多条件查询
+    @Test
+    public void testFindTeacherByMany (){
+        Teacher teacher=new Teacher();
+
+        teacher.setCollege("食品科学技术学院·化学工程学院");
+        teacher.setRname("教师");
+        teacher.setTname("周睿");
+
+        System.out.println(teacherController.findTeacherByMany(teacher));
+    }
+
+
+    //修改teacher通过number
+    @Test
+    public void updateTeacher(){
+
+        Teacher teacher=new Teacher();
+        teacher.setNumber("txxxx");
+        teacher.setTname("test222");
+        teacher.setSex("男");
+        teacher.setWages("456789");
+        teacher.setPhone("11111111111");
+        teacher.setCollege("教务处");
+        teacher.setRname("教师");
+        teacher.setTimes(0);
+
+        teacherController.updateTeacher(teacher);
+    }
+
+    //批量导入teacher
+    @Test
+    public void insertAllTeacher(){
+        List<Teacher> lists=new ArrayList<>();
+
+        Teacher teacher1=new Teacher();
+        Teacher teacher2=new Teacher();
+
+        teacher1.setNumber("txxx1");
+        teacher1.setTname("test222");
+        teacher1.setSex("男");
+        teacher1.setWages("456789");
+        teacher1.setPhone("11111111111");
+        teacher1.setCollege("教务处");
+        teacher1.setRname("教师");
+        teacher1.setTimes(0);
+
+
+        teacher2.setNumber("txxx2");
+        teacher2.setTname("test222");
+        teacher2.setSex("男");
+        teacher2.setWages("456789");
+        teacher2.setPhone("11111111111");
+        teacher2.setCollege("马克思主义学院");
+        teacher2.setRname("教师");
+        teacher2.setTimes(0);
+
+        lists.add(teacher1);
+        lists.add(teacher2);
+        teacherController.insertAllTeacher(lists);
+    }
+
 }
