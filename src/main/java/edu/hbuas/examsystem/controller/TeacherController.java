@@ -6,7 +6,7 @@ import edu.hbuas.examsystem.service.TeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,40 +18,40 @@ public class TeacherController {
     private TeacherService teacherService;
 
     //查询所有teacher
-    @RequestMapping("/findAllTeachaer")
-    public List<Teacher> findAllTeachaer(){
-        return teacherService.findAllTeachaer();
+    @GetMapping("/findAllTeachaer")
+    public List<Teacher> findAllTeacher(){
+        return teacherService.findAllTeacher();
     }
 
     //查询teacher多条件
-    @RequestMapping("/findTeacherByMany")
+    @GetMapping("/findTeacherByMany")
     public Teacher findTeacherByMany(Teacher teacher){
         return teacherService.findTeacherByMany(teacher);
     }
 
-    //批量删除teacher根据number
-    @RequestMapping("/deleteTeacherByNumber")
-    public void deleteTeacherByNumber(List<Teacher> lists){
-        teacherService.deleteTeacherByNumber(lists);
+    //批量删除teacher根据tid
+    @DeleteMapping("/deleteTeacherByTid")
+    public String deleteTeacherByNumber(List<Teacher> lists){
+        return  teacherService.deleteTeacherByTid(lists);
     }
 
 
     //保存teacher
-    @RequestMapping("/saveTeacher")
-    public void insertTeacher(Teacher teacher){
-        teacherService.insertTeacher(teacher);
+    @PostMapping("/saveTeacher")
+    public String insertTeacher(Teacher teacher){
+       return teacherService.insertTeacher(teacher);
     }
 
     //批量导入teacher
-    @RequestMapping("/insertAllTeacher")
-    public void insertAllTeacher(List<Teacher> lists){
-        teacherService.insertAllTeacher(lists);
+    @PostMapping("/insertAllTeacher")
+    public String insertAllTeacher(List<Teacher> lists){
+        return teacherService.insertAllTeacher(lists);
     }
 
-    //修改teacher通过number
-    @RequestMapping("/updateTeacher")
-    public void updateTeacher(Teacher teacher){
-        teacherService.updateTeacher(teacher);
+    //修改teacher通过tid
+    @PutMapping("/updateTeacherByTid")
+    public String updateTeacher(Teacher teacher){
+        return teacherService.updateTeacherByTid(teacher);
     }
 
 }

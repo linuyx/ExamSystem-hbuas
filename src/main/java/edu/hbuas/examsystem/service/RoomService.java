@@ -10,9 +10,15 @@ public interface RoomService {
     //查询所有room
     List<Room> findAllRoom();
 
+    //保存room
+    String insertRoom(Room room);
+
     //导入所有考场信息
-    void insertAllRoom(List<Room> lists);
+    String insertAllRoom(List<Room> lists);
 
     //批量删除room通过rrid
-    void deleteManyRoomByRrid(List<Room> lists);
+    String deleteManyRoomByRrid(List<Room> lists);
+
+    //修改room通过rrid
+    String updateRoomByRrid(Room room);
 }

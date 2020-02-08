@@ -20,20 +20,31 @@ public class RoomController {
 
     //查询所有room
     @RequestMapping("/findAllRoom")
-    @ResponseBody
     public List<Room> findAllRoom(){
         return roomService.findAllRoom();
     }
 
+    //保存room
+    @RequestMapping("/insertRoom")
+    public String insertRoom(Room room){
+        return roomService.insertRoom(room);
+    }
+
     //导入所有考场信息
     @RequestMapping("/insertAllRoom")
-    public void insertAllRoom(List<Room> lists){
-        roomService.insertAllRoom(lists);
+    public String insertAllRoom(List<Room> lists){
+       return roomService.insertAllRoom(lists);
     }
 
     //批量删除room通过rrid
     @RequestMapping("/deleteManyRoomByNumber")
-    public void deleteManyRoomByRrid(List<Room> lists){
-        roomService.deleteManyRoomByRrid(lists);
+    public String deleteManyRoomByRrid(List<Room> lists){
+        return roomService.deleteManyRoomByRrid(lists);
+    }
+
+    //修改room通过rrid
+    @RequestMapping("updateRoomByRrid")
+    public String updateRoomByRrid(Room room){
+        return roomService.updateRoomByRrid(room);
     }
 }

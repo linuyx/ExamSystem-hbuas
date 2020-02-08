@@ -11,13 +11,19 @@ import java.util.List;
 public interface TeacherMapper {
 
     //查询所有teacher
-    List<Teacher> findAllTeachaer();
+    List<Teacher> findAllTeacher();
 
      //查询teacher多条件
     Teacher findTeacherByMany(Teacher teacher);
 
-    //批量删除teacher根据number
-    void deleteTeacherByNumber(@Param("lists") List<Teacher> lists);
+    //查询teacher全条件
+    Teacher findTeacherByAll(Teacher teacher);
+
+    //查询单个teacher根据number
+    Teacher findTeacherByNumber(Teacher teacher);
+
+    //批量删除teacher根据tid
+    void deleteTeacherByTid(@Param("lists") List<Teacher> lists);
 
     //保存teacher
     void insertTeacher(Teacher teacher);
@@ -25,7 +31,7 @@ public interface TeacherMapper {
     //批量导入teacher
     void insertAllTeacher(@Param("lists") List<Teacher> lists);
 
-    //修改teacher通过number
-    void updateTeacher(Teacher teacher);
+    //修改teacher通过tid
+    void updateTeacherByTid(Teacher teacher);
 
 }

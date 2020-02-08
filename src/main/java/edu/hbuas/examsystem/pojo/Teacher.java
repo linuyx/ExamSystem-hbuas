@@ -1,6 +1,7 @@
 package edu.hbuas.examsystem.pojo;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class Teacher implements Serializable {
     private Integer tid;
@@ -24,6 +25,8 @@ public class Teacher implements Serializable {
     private String college;
 
     private String rname;
+
+    private boolean flag;
 
     public Integer getTid() {
         return tid;
@@ -113,6 +116,14 @@ public class Teacher implements Serializable {
         this.rname = rname;
     }
 
+    public boolean getFlag() {
+        return flag;
+    }
+
+    public void setFlag(boolean flag) {
+        this.flag = flag;
+    }
+
     @Override
     public String toString() {
         return "Teacher{" +
@@ -127,6 +138,15 @@ public class Teacher implements Serializable {
                 ", times=" + times +
                 ", college='" + college + '\'' +
                 ", rname='" + rname + '\'' +
+                ", flag=" + flag +
                 '}';
+    }
+
+    public boolean sjk(Teacher teacher1,Teacher teacher2){
+        if(teacher1.getNumber()==teacher2.getNumber()){
+            return true;
+        }else {
+            return false;
+        }
     }
 }

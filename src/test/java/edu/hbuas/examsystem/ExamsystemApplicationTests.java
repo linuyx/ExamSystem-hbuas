@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.net.SocketTimeoutException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -63,36 +64,67 @@ class ExamsystemApplicationTests {
         lists.add(room2);
         lists.add(room3);
 
-        roomController.insertAllRoom(lists);
+        System.out.println(roomController.insertAllRoom(lists));
+    }
+
+
+    //测试保存room
+    @Test
+    public void testInsertRoom(){
+        Room room=new Room();
+
+        room.setTid(38);
+        room.setRid(1024);
+        room.setPlace("N8-C207");
+        room.setNumber("C207");
+        room.setCampus(0);
+        room.setStorid(8);
+
+        System.out.println(roomController.insertRoom(room));
     }
 
 
     //测试批量删除room通过rrid
     @Test
-    public void deleteManyRoomByRrid(){
+    public void testDeleteManyRoomByRrid(){
         List<Room> lists=new ArrayList<>();
 
         Room room1=new Room();
         Room room2=new Room();
-        Room room3=new Room();
 
-        room1.setRrid(1336);
-        room2.setRrid(1337);
-        room3.setRrid(1338);
+        room1.setRrid(1339);
+        room2.setRrid(1340);
 
         lists.add(room1);
         lists.add(room2);
-        lists.add(room3);
 
-        roomController.deleteManyRoomByRrid(lists);
+        System.out.println(roomController.deleteManyRoomByRrid(lists));
 
     }
+
+
+    //测试修改room通过rrid
+    @Test
+    public void testUpdateRoomByRrid(){
+        Room room =new Room();
+
+        room.setRrid(1363);
+        room.setTid(38);
+        room.setRid(1024);
+        room.setPlace("N8");
+        room.setNumber("C207");
+        room.setCampus(0);
+        room.setStorid(8);
+
+        System.out.println(roomController.updateRoomByRrid(room));
+    }
+
 
 
     //查询所有teacher
     @Test
     public void testFindAllTeachaer(){
-        List<Teacher> lists=teacherController.findAllTeachaer();
+        List<Teacher> lists=teacherController.findAllTeacher();
         for(Teacher teacher:lists){
             System.out.println(teacher);
         }
@@ -104,16 +136,16 @@ class ExamsystemApplicationTests {
     public void testInsertTeacher(){
         Teacher teacher=new Teacher();
 
-        teacher.setNumber("twww");
-        teacher.setTname("test");
-        teacher.setSex("男");
-        teacher.setWages("123456789");
+        teacher.setNumber("tuoo26");
+        teacher.setTname("test2");
+        teacher.setSex("男2");
+        teacher.setWages("1234567890");
         teacher.setPhone("123456789");
         teacher.setCollege("马克思主义学院");
         teacher.setRname("教师");
         teacher.setTimes(0);
 
-        teacherController.insertTeacher(teacher);
+        System.out.println(teacherController.insertTeacher(teacher));
     }
 
     //测试删除用户
@@ -121,20 +153,18 @@ class ExamsystemApplicationTests {
     public void testDeleteTeacherByNumber(){
         Teacher teacher1=new Teacher();
         Teacher teacher2=new Teacher();
-        Teacher teacher3=new Teacher();
 
 
-        teacher1.setNumber("txxx2");
-        teacher2.setNumber("");
-        teacher3.setNumber("");
+        teacher1.setTid(13076);
+        teacher2.setTid(13077);
+
 
         List<Teacher> lists=new ArrayList<>();
 
         lists.add(teacher1);
         lists.add(teacher2);
-        lists.add(teacher3);
 
-        teacherController.deleteTeacherByNumber(lists);
+        System.out.println(teacherController.deleteTeacherByNumber(lists));
     }
 
 
@@ -145,27 +175,28 @@ class ExamsystemApplicationTests {
 
         teacher.setCollege("食品科学技术学院·化学工程学院");
         teacher.setRname("教师");
-        teacher.setTname("周睿");
+        teacher.setTname("周");
 
         System.out.println(teacherController.findTeacherByMany(teacher));
     }
 
 
-    //修改teacher通过number
+    //修改teacher通过tid
     @Test
     public void updateTeacher(){
 
         Teacher teacher=new Teacher();
-        teacher.setNumber("txxxx");
-        teacher.setTname("test222");
+        teacher.setTid(13098);
+        teacher.setNumber("txxx10");
+        teacher.setTname("test2264");
         teacher.setSex("男");
-        teacher.setWages("456789");
+        teacher.setWages("4567897s");
         teacher.setPhone("11111111111");
         teacher.setCollege("教务处");
         teacher.setRname("教师");
         teacher.setTimes(0);
 
-        teacherController.updateTeacher(teacher);
+        System.out.println( teacherController.updateTeacher(teacher));;
     }
 
     //批量导入teacher
@@ -176,7 +207,7 @@ class ExamsystemApplicationTests {
         Teacher teacher1=new Teacher();
         Teacher teacher2=new Teacher();
 
-        teacher1.setNumber("txxx1");
+        teacher1.setNumber("txxx8");
         teacher1.setTname("test222");
         teacher1.setSex("男");
         teacher1.setWages("456789");
@@ -186,7 +217,7 @@ class ExamsystemApplicationTests {
         teacher1.setTimes(0);
 
 
-        teacher2.setNumber("txxx2");
+        teacher2.setNumber("txxx9");
         teacher2.setTname("test222");
         teacher2.setSex("男");
         teacher2.setWages("456789");

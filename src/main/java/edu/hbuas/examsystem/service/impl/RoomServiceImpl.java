@@ -21,15 +21,38 @@ public class RoomServiceImpl implements RoomService {
         return roomMapper.findAllRoom();
     }
 
+    //保存room
+    public String insertRoom(Room room){
+        if(null==roomMapper.findRoomByAll(room)){
+            roomMapper.insertRoom(room);
+            return "添加成功";
+        }else {
+            return "此教室已存在";
+        }
+
+    }
+
     //导入所有考场信息
     @Transactional
-    public void insertAllRoom(List<Room> lists){
+    public String insertAllRoom(List<Room> lists){
         roomMapper.insertAllRoom(lists);
+        return "导入成功";
     }
 
     //批量删除room通过rrid
     @Transactional
-    public void deleteManyRoomByRrid(List<Room> lists){
+    public String deleteManyRoomByRrid(List<Room> lists){
         roomMapper.deleteManyRoomByRrid(lists);
+        return  "删除成功";
+    }
+
+    //修改room通过rrid
+    public String updateRoomByRrid(Room room){
+        if(null==roomMapper.findRoomNoRrid(room)){
+            roomMapper.updateRoomByRrid(room);
+            return "修改成功";
+        }else{
+            return "此教室已存在";
+        }
     }
 }

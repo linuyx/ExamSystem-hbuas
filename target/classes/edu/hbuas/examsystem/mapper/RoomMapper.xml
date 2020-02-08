@@ -10,6 +10,30 @@
         select * from room
     </select>
 
+    <!--查询room全条件-->
+    <select id="findRoomByAll" parameterType="room" resultType="room">
+        select * from room
+        where
+        tid=#{tid} and place=#{place} and number=#{number} and campus=#{campus}
+        and storid=#{storid}
+    </select>
+
+    <!--查询roomrrid不等于自己-->
+    <select id="findRoomNoRrid" parameterType="room" resultType="room">
+        select * from room
+        where
+        tid=#{tid} and place=#{place} and number=#{number} and campus=#{campus}
+        and storid=#{storid}
+        and rrid!=#{rrid}
+    </select>
+
+    <!--保存room-->
+    <insert id="insertRoom" parameterType="room">
+        insert into room(tid,rid,place,number,campus,storid)
+        values
+        (#{tid},#{rid},#{place},#{number},#{campus},#{storid})
+    </insert>
+
     <!--导入所有考场信息-->
     <insert id="insertAllRoom" parameterType="room">
         insert into room (tid,rid,place,number,campus,storid)
@@ -26,4 +50,12 @@
             #{list.rrid}
         </foreach>
     </delete>
+
+    <!--修改room通过rrid-->
+    <update id="updateRoomByRrid" parameterType="room">
+        update room set tid=#{tid},rid=#{rid},place=#{place},number=#{number},campus=#{campus}
+        ,storid=#{storid}
+        where rrid=#{rrid}
+    </update>
+
 </mapper>

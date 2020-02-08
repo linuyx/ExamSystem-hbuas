@@ -6,25 +6,41 @@
 <mapper namespace="edu.hbuas.examsystem.mapper.TeacherMapper">
 
     <!--查询所有teacher-->
-    <select id="findAllTeachaer" resultType="teacher">
-        SELECT  number,tname,sex,wages,phone,college,rname,times FROM  teacher,college,role
+    <select id="findAllTeacher" resultType="teacher">
+        SELECT  tid,number,tname,sex,wages,phone,college,rname,times FROM  teacher,college,role
         WHERE
          teacher.cid=college.cid  and teacher.rid=role.rid
     </select>
 
     <!--查询teacher多条件-->
     <select id="findTeacherByMany" parameterType="teacher" resultType="teacher">
-        select number,tname,sex,wages,phone,college,rname,times from teacher,college,role
+        select tid,number,tname,sex,wages,phone,college,rname,times from teacher,college,role
         where
         teacher.cid=#{cid} and tname=#{tname} and teacher.rid=#{rid}
         and teacher.cid=college.cid and teacher.rid=role.rid
     </select>
 
-    <!--批量删除teacher根据number-->
-    <delete id="deleteTeacherByNumber" parameterType="teacher">
-        delete from teacher where number in
+    <!--查询teacher全条件-->
+    <select id="findTeacherByAll" parameterType="teacher" resultType="teacher">
+        select * from teacher
+        where
+        number=#{number} and tname=#{tname} and sex=#{sex} and wages=#{wages}
+        and phone=#{phone} and teacher.cid=#{cid} and rid=#{rid} and times=#{times}
+        or number=#{number}
+    </select>
+
+    <!--查询单个teacher根据number-->
+    <select id="findTeacherByNumber" parameterType="teacher" resultType="teacher">
+        select * from teacher
+        where
+        number=#{number} and tid!=#{tid}
+    </select>
+
+    <!--批量删除teacher根据tid-->
+    <delete id="deleteTeacherByTid" parameterType="teacher">
+        delete from teacher where tid in
         <foreach collection="lists" item="list" open="(" close=")" separator=",">
-            #{list.number}
+            #{list.tid}
         </foreach>
     </delete>
 
@@ -45,12 +61,12 @@
         </foreach>
     </insert>
 
-    <!--修改teacher通过number-->
-    <update id="updateTeacher" parameterType="teacher">
-        update teacher set tname=#{tname},sex=#{sex},wages=#{wages},
+    <!--修改teacher通过tid-->
+    <update id="updateTeacherByTid" parameterType="teacher">
+        update teacher set number=#{number}, tname=#{tname},sex=#{sex},wages=#{wages},
         phone=#{phone},cid=#{cid},rid=#{rid},times=#{times}
         where
-        number=#{number}
+        tid=#{tid}
     </update>
 
 </mapper>
