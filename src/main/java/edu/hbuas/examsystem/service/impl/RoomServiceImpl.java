@@ -25,7 +25,7 @@ public class RoomServiceImpl implements RoomService {
     public String insertRoom(Room room){
         if(null==roomMapper.findRoomByAll(room)){
             roomMapper.insertRoom(room);
-            return "添加成功";
+            return "保存成功";
         }else {
             return "此教室已存在";
         }

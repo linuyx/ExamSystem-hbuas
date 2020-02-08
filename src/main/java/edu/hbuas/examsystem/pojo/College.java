@@ -32,4 +32,13 @@ public class College implements Serializable {
     public void setCollege(String college) {
         this.college = college == null ? null : college.trim();
     }
+
+    @Override
+    public String toString() {
+        return "College{" +
+                "id=" + id +
+                ", cid=" + cid +
+                ", college='" + college + '\'' +
+                '}';
+    }
 }

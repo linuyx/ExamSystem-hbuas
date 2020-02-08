@@ -1,4 +1,4 @@
-package edu.hbuas.examsystem.mapper;
+package edu.hbuas.examsystem.service;
 
 import edu.hbuas.examsystem.pojo.College;
 import org.apache.ibatis.annotations.Param;
@@ -6,9 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
-public interface CollegeMapper {
-
+public interface CollegeService {
 
     //查询所有college
     List<College> findAllColege();
@@ -16,15 +14,12 @@ public interface CollegeMapper {
     //根据名称查找college
     College findCollegeByName (String string);
 
-    //查找college用于判断是否存在
-    List<College> findCollege(College college);
-
     //批量删除college
-    void deleteCollege(@Param("lists") List<College> lists);
+    String deleteCollege(List<College> lists);
 
     //保存college
-    void insertCollege(College college);
+    String insertCollege(College college);
 
     //修改college
-    void updateCollege(College college);
+    String updateCollege(College college);
 }

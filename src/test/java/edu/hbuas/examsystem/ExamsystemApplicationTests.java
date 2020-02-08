@@ -1,7 +1,9 @@
 package edu.hbuas.examsystem;
 
+import edu.hbuas.examsystem.controller.CollegeController;
 import edu.hbuas.examsystem.controller.RoomController;
 import edu.hbuas.examsystem.controller.TeacherController;
+import edu.hbuas.examsystem.pojo.College;
 import edu.hbuas.examsystem.pojo.Room;
 import edu.hbuas.examsystem.pojo.Teacher;
 import org.junit.jupiter.api.Test;
@@ -21,6 +23,9 @@ class ExamsystemApplicationTests {
 
     @Autowired
     private TeacherController teacherController;
+
+    @Autowired
+    private CollegeController collegeController;
 
 
     @Test
@@ -231,4 +236,58 @@ class ExamsystemApplicationTests {
         teacherController.insertAllTeacher(lists);
     }
 
+
+    //测试查询所有college
+    @Test
+    public void testFindAllCollege(){
+        List<College> lists=collegeController.findAllColege();
+        for(College college:lists){
+            System.out.println(college);
+        }
+    }
+
+    //测试根据名称查询college
+    @Test
+    public void testFindCollegeByName(){
+        System.out.println(collegeController.findCollegeByName("计算机工程学院"));
+    }
+
+    //测试保存学院
+    @Test
+    public void testInsertCollege(){
+        College college=new College();
+        college.setCid(9);
+        college.setCollege("计算机工程学院");
+
+        System.out.println(collegeController.insertCollege(college));
+    }
+
+    //测试修改学院
+    @Test
+    public void testUpdateCollege(){
+        College college=new College();
+        college.setId(30);
+        college.setCid(94);
+        college.setCollege("计算机工程学院");
+        System.out.println(collegeController.updateCollege(college));
+    }
+
+    //测试删除学院
+    @Test
+    public void testDeleteCollege(){
+        College college1=new College();
+        College college2=new College();
+        College college3=new College();
+
+        college1.setId(21);
+        college2.setId(22);
+        college3.setId(23);
+
+        List<College> lists=new ArrayList<>();
+        lists.add(college1);
+        lists.add(college2);
+        lists.add(college3);
+
+        System.out.println(collegeController.deleteCollege(lists));
+    }
 }

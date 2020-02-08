@@ -66,7 +66,7 @@ public class TeacherServiceImpl implements TeacherService {
 
         if(null==teacherMapper.findTeacherByAll(teacher)){
             teacherMapper.insertTeacher(teacher);
-            return "添加成功";
+            return "保存成功";
         }else{
                 return"此用户已存在";
         }

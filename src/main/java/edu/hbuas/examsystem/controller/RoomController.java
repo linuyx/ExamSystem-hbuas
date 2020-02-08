@@ -43,7 +43,7 @@ public class RoomController {
     }
 
     //修改room通过rrid
-    @RequestMapping("updateRoomByRrid")
+    @RequestMapping("/updateRoomByRrid")
     public String updateRoomByRrid(Room room){
         return roomService.updateRoomByRrid(room);
     }
