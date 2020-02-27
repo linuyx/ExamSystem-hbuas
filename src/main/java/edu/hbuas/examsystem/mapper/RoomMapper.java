@@ -12,8 +12,8 @@ public interface RoomMapper {
     //查询所有room
     List<Room> findAllRoom();
 
-    //查询room全条件
-    Room findRoomByAll(Room room);
+    //查询room通过place
+    List<Room> findRoomByPlace(Room room);
 
     //查询roomrrid不等于自己
     Room findRoomNoRrid(Room room);

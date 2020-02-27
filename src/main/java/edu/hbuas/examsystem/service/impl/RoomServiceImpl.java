@@ -22,8 +22,9 @@ public class RoomServiceImpl implements RoomService {
     }
 
     //保存room
+    @Transactional
     public String insertRoom(Room room){
-        if(null==roomMapper.findRoomByAll(room)){
+        if(0==roomMapper.findRoomByPlace(room).size()){
             roomMapper.insertRoom(room);
             return "保存成功";
         }else {
@@ -47,6 +48,7 @@ public class RoomServiceImpl implements RoomService {
     }
 
     //修改room通过rrid
+    @Transactional
     public String updateRoomByRrid(Room room){
         if(null==roomMapper.findRoomNoRrid(room)){
             roomMapper.updateRoomByRrid(room);

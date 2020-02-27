@@ -20,11 +20,11 @@ public interface CollegeMapper {
     List<College> findCollege(College college);
 
     //批量删除college
-    void deleteCollege(@Param("lists") List<College> lists);
+    void deleteCollegeById(@Param("lists") List<College> lists);
 
     //保存college
     void insertCollege(College college);
 
     //修改college
-    void updateCollege(College college);
+    void updateCollegeById(College college);
 }

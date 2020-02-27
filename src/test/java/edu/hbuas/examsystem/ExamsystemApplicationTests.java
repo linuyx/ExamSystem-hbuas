@@ -2,9 +2,11 @@ package edu.hbuas.examsystem;
 
 import edu.hbuas.examsystem.controller.CollegeController;
 import edu.hbuas.examsystem.controller.RoomController;
+import edu.hbuas.examsystem.controller.SurfaceController;
 import edu.hbuas.examsystem.controller.TeacherController;
 import edu.hbuas.examsystem.pojo.College;
 import edu.hbuas.examsystem.pojo.Room;
+import edu.hbuas.examsystem.pojo.Surface;
 import edu.hbuas.examsystem.pojo.Teacher;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +29,9 @@ class ExamsystemApplicationTests {
     @Autowired
     private CollegeController collegeController;
 
+    @Autowired
+    private SurfaceController surfaceController;
+
 
     @Test
     //测试查询所有room
@@ -44,25 +49,19 @@ class ExamsystemApplicationTests {
         Room room2=new Room();
         Room room3=new Room();
 
-        room1.setTid(1024);
         room1.setRid(1024);
-        room1.setPlace("test1");
+        room1.setPlace("test555");
         room1.setNumber("test1");
-        room1.setCampus(1024);
         room1.setStorid(1024);
 
-        room2.setTid(1024);
         room2.setRid(1024);
-        room2.setPlace("test2");
+        room2.setPlace("test666");
         room2.setNumber("test2");
-        room2.setCampus(1024);
         room2.setStorid(1024);
 
-        room3.setTid(1024);
         room3.setRid(1024);
-        room3.setPlace("test3");
+        room3.setPlace("test777");
         room3.setNumber("test3");
-        room3.setCampus(1024);
         room3.setStorid(1024);
 
         lists.add(room1);
@@ -78,11 +77,9 @@ class ExamsystemApplicationTests {
     public void testInsertRoom(){
         Room room=new Room();
 
-        room.setTid(38);
-        room.setRid(1024);
-        room.setPlace("N8-C207");
-        room.setNumber("C207");
-        room.setCampus(0);
+        room.setRid(159);
+        room.setPlace("N8-C210");
+        room.setNumber("C210");
         room.setStorid(8);
 
         System.out.println(roomController.insertRoom(room));
@@ -97,8 +94,8 @@ class ExamsystemApplicationTests {
         Room room1=new Room();
         Room room2=new Room();
 
-        room1.setRrid(1339);
-        room2.setRrid(1340);
+        room1.setRrid(1341);
+        room2.setRrid(1342);
 
         lists.add(room1);
         lists.add(room2);
@@ -113,12 +110,10 @@ class ExamsystemApplicationTests {
     public void testUpdateRoomByRrid(){
         Room room =new Room();
 
-        room.setRrid(1363);
-        room.setTid(38);
-        room.setRid(1024);
-        room.setPlace("N8");
-        room.setNumber("C207");
-        room.setCampus(0);
+        room.setRrid(1368);
+        room.setRid(555);
+        room.setPlace("test778");
+        room.setNumber("test");
         room.setStorid(8);
 
         System.out.println(roomController.updateRoomByRrid(room));
@@ -249,15 +244,15 @@ class ExamsystemApplicationTests {
     //测试根据名称查询college
     @Test
     public void testFindCollegeByName(){
-        System.out.println(collegeController.findCollegeByName("计算机工程学院"));
+        System.out.println(collegeController.findCollegeByName("政法学院"));
     }
 
     //测试保存学院
     @Test
     public void testInsertCollege(){
         College college=new College();
-        college.setCid(9);
-        college.setCollege("计算机工程学院");
+        college.setCid(1000);
+        college.setCollege("test3");
 
         System.out.println(collegeController.insertCollege(college));
     }
@@ -266,10 +261,10 @@ class ExamsystemApplicationTests {
     @Test
     public void testUpdateCollege(){
         College college=new College();
-        college.setId(30);
-        college.setCid(94);
-        college.setCollege("计算机工程学院");
-        System.out.println(collegeController.updateCollege(college));
+        college.setId(35);
+        college.setCid(45);
+        college.setCollege("test222");
+        System.out.println(collegeController.updateCollegeById(college));
     }
 
     //测试删除学院
@@ -279,15 +274,25 @@ class ExamsystemApplicationTests {
         College college2=new College();
         College college3=new College();
 
-        college1.setId(21);
-        college2.setId(22);
-        college3.setId(23);
+        college1.setId(35);
+//        college2.setId(34);
+//        college3.setId(23);
 
         List<College> lists=new ArrayList<>();
         lists.add(college1);
-        lists.add(college2);
-        lists.add(college3);
+//        lists.add(college2);
+//        lists.add(college3);
 
-        System.out.println(collegeController.deleteCollege(lists));
+        System.out.println(collegeController.deleteCollegeById(lists));
+    }
+
+    //测试查询所有surface
+    @Test
+    public void testFindAllSurface(){
+        List<Surface> lists=surfaceController.findAllSurface();
+
+        for(Surface surface:lists){
+            System.out.println(surface);
+        }
     }
 }

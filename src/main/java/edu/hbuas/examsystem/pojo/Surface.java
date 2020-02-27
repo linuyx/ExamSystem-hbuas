@@ -14,11 +14,11 @@ public class Surface implements Serializable {
 
     private Integer rid;
 
-    private Date testtime;
+    private String testtime;
 
-    private Date begin;
+    private String begin;
 
-    private Date end;
+    private String end;
 
     private String worknumber;
 
@@ -64,27 +64,27 @@ public class Surface implements Serializable {
         this.rid = rid;
     }
 
-    public Date getTesttime() {
+    public String getTesttime() {
         return testtime;
     }
 
-    public void setTesttime(Date testtime) {
+    public void setTesttime(String testtime) {
         this.testtime = testtime;
     }
 
-    public Date getBegin() {
+    public String getBegin() {
         return begin;
     }
 
-    public void setBegin(Date begin) {
+    public void setBegin(String begin) {
         this.begin = begin;
     }
 
-    public Date getEnd() {
+    public String getEnd() {
         return end;
     }
 
-    public void setEnd(Date end) {
+    public void setEnd(String end) {
         this.end = end;
     }
 
@@ -102,5 +102,21 @@ public class Surface implements Serializable {
 
     public void setNumber(Integer number) {
         this.number = number;
+    }
+
+    @Override
+    public String toString() {
+        return "Surface{" +
+                "suid=" + suid +
+                ", teacher='" + teacher + '\'' +
+                ", eid=" + eid +
+                ", tid=" + tid +
+                ", rid=" + rid +
+                ", testtime=" + testtime +
+                ", begin=" + begin +
+                ", end=" + end +
+                ", worknumber='" + worknumber + '\'' +
+                ", number=" + number +
+                '}';
     }
 }

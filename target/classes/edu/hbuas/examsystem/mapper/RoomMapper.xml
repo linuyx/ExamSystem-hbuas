@@ -10,36 +10,36 @@
         select * from room
     </select>
 
-    <!--查询room全条件-->
-    <select id="findRoomByAll" parameterType="room" resultType="room">
+    <!--查询room通过place-->
+    <select id="findRoomByPlace" parameterType="room" resultType="room">
         select * from room
         where
-        tid=#{tid} and place=#{place} and number=#{number} and campus=#{campus}
-        and storid=#{storid}
+        place=#{place}
     </select>
 
     <!--查询roomrrid不等于自己-->
     <select id="findRoomNoRrid" parameterType="room" resultType="room">
         select * from room
         where
-        tid=#{tid} and place=#{place} and number=#{number} and campus=#{campus}
-        and storid=#{storid}
-        and rrid!=#{rrid}
+        place=#{place}
+        and
+        rrid!=#{rrid}
     </select>
+
 
     <!--保存room-->
     <insert id="insertRoom" parameterType="room">
-        insert into room(tid,rid,place,number,campus,storid)
+        insert into room(rid,place,number,campus,storid)
         values
-        (#{tid},#{rid},#{place},#{number},#{campus},#{storid})
+        (#{rid},#{place},#{number},0,#{storid})
     </insert>
 
     <!--导入所有考场信息-->
     <insert id="insertAllRoom" parameterType="room">
-        insert into room (tid,rid,place,number,campus,storid)
+        insert into room (rid,place,number,campus,storid)
         values
         <foreach collection="lists" item="list" separator=",">
-            (#{list.tid},#{list.rid},#{list.place},#{list.number},#{list.campus},#{list.storid})
+            (#{list.rid},#{list.place},#{list.number},0,#{list.storid})
         </foreach>
     </insert>
     
@@ -53,8 +53,7 @@
 
     <!--修改room通过rrid-->
     <update id="updateRoomByRrid" parameterType="room">
-        update room set tid=#{tid},rid=#{rid},place=#{place},number=#{number},campus=#{campus}
-        ,storid=#{storid}
+        update room set rid=#{rid},place=#{place},number=#{number},storid=#{storid}
         where rrid=#{rrid}
     </update>
 

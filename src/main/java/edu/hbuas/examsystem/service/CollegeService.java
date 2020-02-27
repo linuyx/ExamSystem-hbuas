@@ -15,11 +15,11 @@ public interface CollegeService {
     College findCollegeByName (String string);
 
     //批量删除college
-    String deleteCollege(List<College> lists);
+    String deleteCollegeById(List<College> lists);
 
     //保存college
     String insertCollege(College college);
 
     //修改college
-    String updateCollege(College college);
+    String updateCollegeById(College college);
 }

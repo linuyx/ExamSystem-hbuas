@@ -26,7 +26,7 @@
     </select>
 
     <!--批量删除college-->
-    <delete id="deleteCollege" parameterType="college">
+    <delete id="deleteCollegeById" parameterType="college">
         delete from college where id in
         <foreach collection="lists" item="list" open="(" close=")" separator=",">
             #{list.id}
@@ -41,7 +41,7 @@
     </insert>
 
     <!--修改college-->
-    <update id="updateCollege" parameterType="college">
+    <update id="updateCollegeById" parameterType="college">
         update college set cid=#{cid},college=#{college}
         where
         id=#{id}
