@@ -18,7 +18,7 @@ public class CollegeController {
 
 
     //查询所有college
-    @GetMapping("/findAllColege")
+    @GetMapping("/findAllCollege")
     public List<College> findAllColege(){
         return collegeService.findAllColege();
     }
@@ -32,7 +32,7 @@ public class CollegeController {
 
 
     //批量删除college
-    @DeleteMapping("/deleteCollegeByCid")
+    @DeleteMapping("/deleteCollegeById")
     public String deleteCollegeById(List<College> lists){
         return  collegeService.deleteCollegeById(lists);
     }

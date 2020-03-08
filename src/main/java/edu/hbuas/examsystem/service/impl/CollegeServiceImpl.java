@@ -51,7 +51,7 @@ public class CollegeServiceImpl implements CollegeService {
             collegeMapper.updateCollegeById(college);
             return "保存成功";
         }else {
-            return "此学员已存在";
+            return "此学院已存在";
         }
     }
 }
