@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="edu.hbuas.examsystem.mapper.RoomMapper">
+
+    <!--查询所有room-->
+    <select id="findAllRoom" resultType="room">
+        select * from room
+    </select>
+
+    <!--查询room通过place-->
+    <select id="findRoomByPlace" parameterType="room" resultType="room">
+        select * from room
+        where
+        place=#{place}
+    </select>
+
+    <!--查询roomrrid不等于自己-->
+    <select id="findRoomNoRrid" parameterType="room" resultType="room">
+        select * from room
+        where
+        place=#{place}
+        and
+        rrid!=#{rrid}
+    </select>
+
+
+    <!--保存room-->
+    <insert id="insertRoom" parameterType="room">
+        insert into room(rid,place,number,campus,storid)
+        values
+        (#{rid},#{place},#{number},0,#{storid})
+    </insert>
+
+    <!--导入所有考场信息-->
+    <insert id="insertAllRoom" parameterType="room">
+        insert into room (rid,place,number,campus,storid)
+        values
+        <foreach collection="lists" item="list" separator=",">
+            (#{list.rid},#{list.place},#{list.number},0,#{list.storid})
+        </foreach>
+    </insert>
+    
+    <!--批量删除room通过rrid-->
+    <delete id="deleteManyRoomByRrid" parameterType="room">
+        delete from room where rrid in
+        <foreach collection="lists" item="list" open="(" close=")" separator=",">
+            #{list.rrid}
+        </foreach>
+    </delete>
+
+    <!--修改room通过rrid-->
+    <update id="updateRoomByRrid" parameterType="room">
+        update room set rid=#{rid},place=#{place},number=#{number},storid=#{storid}
+        where rrid=#{rrid}
+    </update>
+
+</mapper>

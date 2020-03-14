@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="edu.hbuas.examsystem.mapper.CollegeMapper">
+
+
+    <!--查询所有college-->
+    <select id="findAllColege" resultType="college">
+        select * from college
+    </select>
+
+    <!--根据名称查找college-->
+    <select id="findCollegeByName" parameterType="string" resultType="college">
+        select * from college
+        where
+        college=#{college}
+    </select>
+
+    <!--查找college用于判断是否存在-->
+    <select id="findCollege" parameterType="college" resultType="college">
+        select * from college
+        where
+        cid=#{cid} or college=#{college}
+    </select>
+
+    <!--批量删除college-->
+    <delete id="deleteCollegeById" parameterType="college">
+        delete from college where id in
+        <foreach collection="lists" item="list" open="(" close=")" separator=",">
+            #{list.id}
+        </foreach>
+    </delete>
+
+    <!--保存college-->
+    <insert id="insertCollege" parameterType="college" >
+        insert into college (cid,college)
+        values
+        (#{cid},#{college})
+    </insert>
+
+    <!--修改college-->
+    <update id="updateCollegeById" parameterType="college">
+        update college set cid=#{cid},college=#{college}
+        where
+        id=#{id}
+    </update>
+</mapper>

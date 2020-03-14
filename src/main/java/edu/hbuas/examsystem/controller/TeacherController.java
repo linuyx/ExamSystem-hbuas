@@ -18,7 +18,7 @@ public class TeacherController {
     private TeacherService teacherService;
 
     //查询所有teacher
-    @GetMapping("/findAllTeachaer")
+    @GetMapping("/findAllTeacher")
     public List<Teacher> findAllTeacher(){
         return teacherService.findAllTeacher();
     }

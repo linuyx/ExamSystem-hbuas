@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="edu.hbuas.examsystem.mapper.TeacherMapper">
+
+    <!--查询所有teacher-->
+    <select id="findAllTeacher" resultType="teacher">
+        SELECT  tid,number,tname,sex,wages,phone,college,rname,times FROM  teacher,college,role
+        WHERE
+         teacher.cid=college.cid  and teacher.rid=role.rid
+    </select>
+
+    <!--查询teacher多条件-->
+    <select id="findTeacherByMany" parameterType="teacher" resultType="teacher">
+        select tid,number,tname,sex,wages,phone,college,rname,times from teacher,college,role
+        where
+        teacher.cid=#{cid} and tname=#{tname} and teacher.rid=#{rid}
+        and teacher.cid=college.cid and teacher.rid=role.rid
+    </select>
+
+    <!--查询teacher全条件-->
+    <select id="findTeacherByAll" parameterType="teacher" resultType="teacher">
+        select * from teacher
+        where
+        number=#{number} and tname=#{tname} and sex=#{sex} and wages=#{wages}
+        and phone=#{phone} and teacher.cid=#{cid} and rid=#{rid} and times=#{times}
+        or number=#{number}
+    </select>
+
+    <!--查询单个teacher根据number-->
+    <select id="findTeacherByNumber" parameterType="teacher" resultType="teacher">
+        select * from teacher
+        where
+        number=#{number} and tid!=#{tid}
+    </select>
+
+    <!--批量删除teacher根据tid-->
+    <delete id="deleteTeacherByTid" parameterType="teacher">
+        delete from teacher where tid in
+        <foreach collection="lists" item="list" open="(" close=")" separator=",">
+            #{list.tid}
+        </foreach>
+    </delete>
+
+    <!--保存teacher-->
+    <insert id="insertTeacher" parameterType="teacher">
+        insert  into teacher (number,tname,sex,wages,phone,cid,rid,times)
+        values
+        (#{number},#{tname},#{sex},#{wages},#{phone},#{cid},#{rid},#{times})
+    </insert>
+
+    <!--批量导入teacher-->
+    <insert id="insertAllTeacher" parameterType="teacher">
+        insert  into teacher (number,tname,sex,wages,phone,cid,rid,times)
+        values
+        <foreach collection="lists" item="list" separator=",">
+        (#{list.number},#{list.tname},#{list.sex},#{list.wages},
+        #{list.phone},#{list.cid},#{list.rid},#{list.times})
+        </foreach>
+    </insert>
+
+    <!--修改teacher通过tid-->
+    <update id="updateTeacherByTid" parameterType="teacher">
+        update teacher set number=#{number}, tname=#{tname},sex=#{sex},wages=#{wages},
+        phone=#{phone},cid=#{cid},rid=#{rid},times=#{times}
+        where
+        tid=#{tid}
+    </update>
+
+</mapper>
