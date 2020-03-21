@@ -9,6 +9,8 @@ public class College implements Serializable {
 
     private String college;
 
+    private boolean flag;
+
     public Integer getId() {
         return id;
     }
@@ -30,7 +32,15 @@ public class College implements Serializable {
     }
 
     public void setCollege(String college) {
-        this.college = college == null ? null : college.trim();
+        this.college = college;
+    }
+
+    public boolean getFlag() {
+        return flag;
+    }
+
+    public void setFlag(boolean flag) {
+        this.flag = flag;
     }
 
     @Override
@@ -39,6 +49,7 @@ public class College implements Serializable {
                 "id=" + id +
                 ", cid=" + cid +
                 ", college='" + college + '\'' +
+                ", flag=" + flag +
                 '}';
     }
 }

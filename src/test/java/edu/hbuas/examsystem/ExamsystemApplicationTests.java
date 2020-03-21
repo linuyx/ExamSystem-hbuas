@@ -175,7 +175,7 @@ class ExamsystemApplicationTests {
 
         teacher.setCollege("食品科学技术学院·化学工程学院");
         teacher.setRname("教师");
-        teacher.setTname("周");
+        teacher.setTname("周睿");
 
         System.out.println(teacherController.findTeacherByMany(teacher));
     }

@@ -39,10 +39,12 @@ public class TeacherServiceImpl implements TeacherService {
         teacher.setRid( (roleMapper.findRoleByName(teacher.getRname())).getRid() );
 
         Teacher teacherRt=teacherMapper.findTeacherByMany(teacher);
+        //判断返回的数据是否为空，不为空flag赋值为true，为空flag赋值为flase
         if(null!=teacherMapper.findTeacherByMany(teacher)){
             teacherRt.setFlag(true);
             return teacherRt;
         }else{
+            //将teacher中falg赋值为false，并返回，如果flag为false，就不会调用里面的其他数据
             teacher.setFlag(false);
             return teacher;
         }
@@ -89,7 +91,7 @@ public class TeacherServiceImpl implements TeacherService {
     @Transactional
     public String updateTeacherByTid(Teacher teacher){
 
-        if(teacherMapper.findTeacherByNumber(teacher)!=null){
+        if(null!=teacherMapper.findTeacherByNumber(teacher)){
             return "修改失败：此教师工号已经存在";
         }
 
