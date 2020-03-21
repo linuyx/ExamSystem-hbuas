@@ -70,7 +70,7 @@ public class TeacherServiceImpl implements TeacherService {
             teacherMapper.insertTeacher(teacher);
             return "保存成功";
         }else{
-                return"此用户已存在";
+                return"此用户已存在或者教师工号重复";
         }
 
     }

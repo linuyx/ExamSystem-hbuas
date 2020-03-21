@@ -25,7 +25,7 @@
         select * from teacher
         where
         number=#{number} and tname=#{tname} and sex=#{sex} and wages=#{wages}
-        and phone=#{phone} and teacher.cid=#{cid} and rid=#{rid} and times=#{times}
+        and phone=#{phone} and cid=#{cid} and rid=#{rid}
         or number=#{number}
     </select>
 
