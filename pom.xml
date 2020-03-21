@@ -16,7 +16,7 @@
     <packaging>war</packaging>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>13</java.version>
         <skipTests>true</skipTests>
     </properties>
 
@@ -51,24 +51,24 @@
             <artifactId>javax.servlet-api</artifactId>
         </dependency>
 
-        <!--引入Spring Boot内嵌的Tomcat对jsp的解析包-->
-        <dependency>
-            <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-jasper</artifactId>
-        </dependency>
+<!--        &lt;!&ndash;引入Spring Boot内嵌的Tomcat对jsp的解析包&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.tomcat.embed</groupId>-->
+<!--            <artifactId>tomcat-embed-jasper</artifactId>-->
+<!--        </dependency>-->
 
-        <!--jsp依赖的jar包-->
-        <dependency>
-            <groupId>javax.servlet.jsp</groupId>
-            <artifactId>javax.servlet.jsp-api</artifactId>
-            <version>2.3.3</version>
-        </dependency>
+<!--        &lt;!&ndash;jsp依赖的jar包&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>javax.servlet.jsp</groupId>-->
+<!--            <artifactId>javax.servlet.jsp-api</artifactId>-->
+<!--            <version>2.3.3</version>-->
+<!--        </dependency>-->
 
-        <!--jstl标签依赖的jar包-->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-        </dependency>
+<!--        &lt;!&ndash;jstl标签依赖的jar包&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>javax.servlet</groupId>-->
+<!--            <artifactId>jstl</artifactId>-->
+<!--        </dependency>-->
 
         <!--加载mybatis整合springboot-->
         <dependency>
@@ -120,13 +120,6 @@
                 <include>**/*.*</include>
             </includes>
         </resource>
-<!--            <resource>-->
-<!--                <directory>src/main/webapp</directory>-->
-<!--                <targetPath>META-INF/resources</targetPath>-->
-<!--                <includes>-->
-<!--                    <include>**/*.*</include>-->
-<!--                </includes>-->
-<!--            </resource>-->
         </resources>
     </build>
 

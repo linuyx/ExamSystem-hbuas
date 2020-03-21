@@ -261,9 +261,9 @@ class ExamsystemApplicationTests {
     @Test
     public void testUpdateCollege(){
         College college=new College();
-        college.setId(35);
-        college.setCid(45);
-        college.setCollege("test222");
+        college.setId(36);
+        college.setCid(789);
+        college.setCollege("456");
         System.out.println(collegeController.updateCollegeById(college));
     }
 

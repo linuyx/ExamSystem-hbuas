@@ -19,6 +19,9 @@ public interface CollegeMapper {
     //查找college用于判断是否存在
     List<College> findCollege(College college);
 
+    //查找college用于判断是否存在且不是自己
+    List<College> findCollegeNoSelf(College college);
+
     //批量删除college
     void deleteCollegeById(@Param("lists") List<College> lists);
 

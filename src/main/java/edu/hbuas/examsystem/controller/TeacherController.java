@@ -26,6 +26,7 @@ public class TeacherController {
 
     //查询teacher多条件
     @GetMapping("/findTeacherByMany")
+    @ResponseBody
     public Teacher findTeacherByMany(Teacher teacher){
         return teacherService.findTeacherByMany(teacher);
     }

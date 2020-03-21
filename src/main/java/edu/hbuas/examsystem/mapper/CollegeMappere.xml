@@ -25,6 +25,15 @@
         cid=#{cid} or college=#{college}
     </select>
 
+    <!--查找college用于判断是否存在且不是自己-->
+    <select id="findCollegeNoSelf" parameterType="college" resultType="college">
+        select * from college
+        where
+        cid=#{cid} and id!=#{id}
+        or
+         college=#{college} and id!=#{id}
+    </select>
+
     <!--批量删除college-->
     <delete id="deleteCollegeById" parameterType="college">
         delete from college where id in
