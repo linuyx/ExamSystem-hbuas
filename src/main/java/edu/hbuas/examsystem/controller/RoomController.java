@@ -36,7 +36,7 @@ public class RoomController {
     }
 
     //批量删除room通过rrid
-    @DeleteMapping("/deleteManyRoomByNumber")
+    @DeleteMapping("/deleteRoomByRrid")
     public String deleteManyRoomByRrid(List<Room> lists){
         return roomService.deleteManyRoomByRrid(lists);
     }

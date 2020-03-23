@@ -39,7 +39,7 @@ public class TeacherController {
 
 
     //保存teacher
-    @PostMapping("/saveTeacher")
+    @PostMapping("/insertTeacher")
     public String insertTeacher(Teacher teacher){
        return teacherService.insertTeacher(teacher);
     }
