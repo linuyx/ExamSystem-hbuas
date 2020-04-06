@@ -6,6 +6,7 @@ import edu.hbuas.examsystem.service.SurfaceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -19,6 +20,7 @@ public class SurfaceController {
 
     //查询所有surface
     @RequestMapping("/findAllSurface")
+    @ResponseBody
     public List<Surface> findAllSurface(){
         return surfaceService.findAllSurface();
     }

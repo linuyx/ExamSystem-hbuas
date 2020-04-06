@@ -33,6 +33,7 @@ public class TeacherController {
 
     //批量删除teacher根据tid
     @DeleteMapping("/deleteTeacherByTid")
+    @ResponseBody
     public String deleteTeacherByNumber(List<Teacher> lists){
         return  teacherService.deleteTeacherByTid(lists);
     }
@@ -40,18 +41,21 @@ public class TeacherController {
 
     //保存teacher
     @PostMapping("/insertTeacher")
+    @ResponseBody
     public String insertTeacher(Teacher teacher){
        return teacherService.insertTeacher(teacher);
     }
 
     //批量导入teacher
     @PostMapping("/insertAllTeacher")
+    @ResponseBody
     public String insertAllTeacher(List<Teacher> lists){
         return teacherService.insertAllTeacher(lists);
     }
 
     //修改teacher通过tid
     @PutMapping("/updateTeacherByTid")
+    @ResponseBody
     public String updateTeacher(Teacher teacher){
         return teacherService.updateTeacherByTid(teacher);
     }

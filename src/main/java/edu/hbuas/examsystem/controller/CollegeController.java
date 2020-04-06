@@ -19,6 +19,7 @@ public class CollegeController {
 
     //查询所有college
     @GetMapping("/findAllCollege")
+    @ResponseBody
     public List<College> findAllColege(){
         return collegeService.findAllColege();
     }
@@ -26,6 +27,7 @@ public class CollegeController {
 
     //根据名称查找college
     @GetMapping("/findCollegeByName")
+    @ResponseBody
     public College findCollegeByName (String string){
         return collegeService.findCollegeByName(string);
     }
@@ -33,6 +35,7 @@ public class CollegeController {
 
     //批量删除college
     @DeleteMapping("/deleteCollegeById")
+    @ResponseBody
     public String deleteCollegeById(List<College> lists){
         return  collegeService.deleteCollegeById(lists);
     }
@@ -40,6 +43,7 @@ public class CollegeController {
 
     //保存college
     @PostMapping("/insertCollege")
+    @ResponseBody
     public String insertCollege(College college){
         return collegeService.insertCollege(college);
     }
@@ -47,6 +51,7 @@ public class CollegeController {
 
     //修改college
     @PutMapping("/updateCollege")
+    @ResponseBody
     public String updateCollegeById(College college){
         return collegeService.updateCollegeById(college);
     }
