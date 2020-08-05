@@ -7,7 +7,7 @@ import java.util.List;
 public interface TeacherService {
 
     //查询所有teacher
-    List<Teacher> findAllTeacher();
+    List<Teacher> selectAll();
 
     //查询teacher多条件
     Teacher findTeacherByMany(Teacher teacher);

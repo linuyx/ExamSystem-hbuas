@@ -9,25 +9,25 @@ import java.util.List;
 @Repository
 public interface CollegeMapper {
 
-
     //查询所有college
-    List<College> findAllColege();
+    List<College> selectAll();
 
     //根据名称查找college
-    College findCollegeByName (String string);
+    College selectByName (String college);
 
     //查找college用于判断是否存在
-    List<College> findCollege(College college);
+    List<College> selectCollege(College college);
 
     //查找college用于判断是否存在且不是自己
-    List<College> findCollegeNoSelf(College college);
+    List<College> selectCollegeNoSelf(College college);
 
     //批量删除college
-    void deleteCollegeById(@Param("lists") List<College> lists);
+    void deleteByName(@Param("lists") List<String> list);
 
     //保存college
     void insertCollege(College college);
 
     //修改college
-    void updateCollegeById(College college);
+    void updateById(College college);
+
 }

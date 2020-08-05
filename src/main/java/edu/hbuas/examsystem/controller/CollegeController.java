@@ -18,42 +18,46 @@ public class CollegeController {
 
 
     //查询所有college
-    @GetMapping("/findAllCollege")
+    @GetMapping("/selectAll")
     @ResponseBody
-    public List<College> findAllColege(){
-        return collegeService.findAllColege();
+    public List<College> selectAll(){
+        return collegeService.selectAll();
     }
+
 
 
     //根据名称查找college
-    @GetMapping("/findCollegeByName")
+    @GetMapping("/selectByName")
     @ResponseBody
-    public College findCollegeByName (String string){
-        return collegeService.findCollegeByName(string);
+    public College selectByName (String college){
+        return collegeService.selectByName(college);
     }
+
 
 
     //批量删除college
-    @DeleteMapping("/deleteCollegeById")
+    @DeleteMapping("/deleteByName")
     @ResponseBody
-    public String deleteCollegeById(List<College> lists){
-        return  collegeService.deleteCollegeById(lists);
+    public String deleteByName(@RequestBody List<String> list){
+        return  collegeService.deleteByName(list);
     }
+
 
 
     //保存college
     @PostMapping("/insertCollege")
     @ResponseBody
-    public String insertCollege(College college){
+    public String insertCollege(@RequestBody College college){
         return collegeService.insertCollege(college);
     }
 
 
+
     //修改college
-    @PutMapping("/updateCollege")
+    @PutMapping("/updateById")
     @ResponseBody
-    public String updateCollegeById(College college){
-        return collegeService.updateCollegeById(college);
+    public String updateById(@RequestBody College college){
+        return collegeService.updateById(college);
     }
 
 }

@@ -5,28 +5,27 @@
 
 <mapper namespace="edu.hbuas.examsystem.mapper.CollegeMapper">
 
-
     <!--查询所有college-->
-    <select id="findAllColege" resultType="college">
+    <select id="selectAll" resultType="college">
         select * from college
     </select>
 
     <!--根据名称查找college-->
-    <select id="findCollegeByName" parameterType="string" resultType="college">
+    <select id="selectByName" parameterType="string" resultType="college">
         select * from college
         where
         college=#{college}
     </select>
 
     <!--查找college用于判断是否存在-->
-    <select id="findCollege" parameterType="college" resultType="college">
+    <select id="selectCollege" parameterType="college" resultType="college">
         select * from college
         where
         cid=#{cid} or college=#{college}
     </select>
 
     <!--查找college用于判断是否存在且不是自己-->
-    <select id="findCollegeNoSelf" parameterType="college" resultType="college">
+    <select id="selectCollegeNoSelf" parameterType="college" resultType="college">
         select * from college
         where
         cid=#{cid} and id!=#{id}
@@ -35,10 +34,10 @@
     </select>
 
     <!--批量删除college-->
-    <delete id="deleteCollegeById" parameterType="college">
-        delete from college where id in
+    <delete id="deleteByName" parameterType="string">
+        delete from college where college in
         <foreach collection="lists" item="list" open="(" close=")" separator=",">
-            #{list.id}
+            #{list}
         </foreach>
     </delete>
 
@@ -50,7 +49,7 @@
     </insert>
 
     <!--修改college-->
-    <update id="updateCollegeById" parameterType="college">
+    <update id="updateById" parameterType="college">
         update college set cid=#{cid},college=#{college}
         where
         id=#{id}

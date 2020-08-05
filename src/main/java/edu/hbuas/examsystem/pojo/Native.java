@@ -1,25 +1,17 @@
 package edu.hbuas.examsystem.pojo;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Native implements Serializable {
     private String card;
 
     private String place;
 
-    public String getCard() {
-        return card;
-    }
-
-    public void setCard(String card) {
-        this.card = card == null ? null : card.trim();
-    }
-
-    public String getPlace() {
-        return place;
-    }
-
-    public void setPlace(String place) {
-        this.place = place == null ? null : place.trim();
-    }
 }

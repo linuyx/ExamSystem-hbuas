@@ -16,7 +16,7 @@
     <packaging>war</packaging>
 
     <properties>
-        <java.version>14</java.version>
+        <java.version>11</java.version>
         <skipTests>true</skipTests>
     </properties>
 
@@ -38,6 +38,27 @@
             </exclusions>
         </dependency>
 
+        <!--布隆过滤器-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>29.0-jre</version>
+        </dependency>
+
+
+        <!--redis依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+        <!--lombok依赖-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
         <!--springboot开发自动热部署-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -45,29 +66,10 @@
             <optional>true</optional>
         </dependency>
 
-        <!--servlet依赖的jar包-->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-        </dependency>
-
-<!--        &lt;!&ndash;引入Spring Boot内嵌的Tomcat对jsp的解析包&ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.apache.tomcat.embed</groupId>-->
-<!--            <artifactId>tomcat-embed-jasper</artifactId>-->
-<!--        </dependency>-->
-
-<!--        &lt;!&ndash;jsp依赖的jar包&ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>javax.servlet.jsp</groupId>-->
-<!--            <artifactId>javax.servlet.jsp-api</artifactId>-->
-<!--            <version>2.3.3</version>-->
-<!--        </dependency>-->
-
-<!--        &lt;!&ndash;jstl标签依赖的jar包&ndash;&gt;-->
+<!--        &lt;!&ndash;servlet依赖的jar包&ndash;&gt;-->
 <!--        <dependency>-->
 <!--            <groupId>javax.servlet</groupId>-->
-<!--            <artifactId>jstl</artifactId>-->
+<!--            <artifactId>javax.servlet-api</artifactId>-->
 <!--        </dependency>-->
 
         <!--加载mybatis整合springboot-->
@@ -90,15 +92,13 @@
             <version>1.1.21</version>
         </dependency>
 
+
 <!--        &lt;!&ndash;springboot和shiro整合&ndash;&gt;-->
 <!--        <dependency>-->
 <!--            <groupId>org.apache.shiro</groupId>-->
 <!--            <artifactId>shiro-spring-boot-web-starter</artifactId>-->
 <!--            <version>1.5.0</version>-->
 <!--        </dependency>-->
-
-
-
 
     </dependencies>
 
@@ -117,12 +117,12 @@
                 <include>**/*.xml</include>
             </includes>
         </resource>
-        <resource>
-            <directory>src/main/resources</directory>
-            <includes>
-                <include>**/*.*</include>
-            </includes>
-        </resource>
+<!--        <resource>-->
+<!--            <directory>src/main/resources</directory>-->
+<!--            <includes>-->
+<!--                <include>**/*.*</include>-->
+<!--            </includes>-->
+<!--        </resource>-->
         </resources>
     </build>
 

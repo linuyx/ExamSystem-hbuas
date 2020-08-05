@@ -1,5 +1,7 @@
 package edu.hbuas.examsystem;
 
+import com.google.common.hash.BloomFilter;
+import com.google.common.hash.Funnels;
 import edu.hbuas.examsystem.controller.CollegeController;
 import edu.hbuas.examsystem.controller.RoomController;
 import edu.hbuas.examsystem.controller.SurfaceController;
@@ -11,9 +13,7 @@ import edu.hbuas.examsystem.pojo.Teacher;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.net.SocketTimeoutException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,6 +48,7 @@ class ExamsystemApplicationTests {
         Room room1=new Room();
         Room room2=new Room();
         Room room3=new Room();
+        
 
         room1.setRid(1024);
         room1.setPlace("test555");
@@ -120,14 +121,13 @@ class ExamsystemApplicationTests {
     }
 
 
-
     //查询所有teacher
     @Test
     public void testFindAllTeachaer(){
-        List<Teacher> lists=teacherController.findAllTeacher();
-        for(Teacher teacher:lists){
-            System.out.println(teacher);
-        }
+        List<Teacher> lists=teacherController.selectAll();
+//        for(Teacher teacher:lists){
+//            System.out.println(teacher);
+//        }
     }
 
 
@@ -155,8 +155,8 @@ class ExamsystemApplicationTests {
         Teacher teacher2=new Teacher();
 
 
-        teacher1.setTid(13076);
-        teacher2.setTid(13077);
+        teacher1.setTid(13097);
+        teacher2.setTid(13098);
 
 
         List<Teacher> lists=new ArrayList<>();
@@ -234,25 +234,42 @@ class ExamsystemApplicationTests {
 
     //测试查询所有college
     @Test
-    public void testFindAllCollege(){
-        List<College> lists=collegeController.findAllColege();
+    public void testSelectAllCollege(){
+
+        List<College> lists=collegeController.selectAll();
         for(College college:lists){
             System.out.println(college);
         }
+
+
+//        Runnable runnable=new Runnable() {
+//            @Override
+//            public void run() {
+//                collegeController.findAllColege();
+//            }
+//        };
+//        runnable.run();
+//
+//        ExecutorService executorService = Executors.newFixedThreadPool(20);
+//
+//        for (int i = 0; i < 10000; i++) {
+//            executorService.submit(runnable);
+//        }
+
     }
 
     //测试根据名称查询college
     @Test
-    public void testFindCollegeByName(){
-        System.out.println(collegeController.findCollegeByName("政法学院"));
+    public void testselectCollegeByName(){
+        System.out.println(collegeController.selectByName("新的测试"));
     }
 
     //测试保存学院
     @Test
     public void testInsertCollege(){
         College college=new College();
-        college.setCid(1000);
-        college.setCollege("test3");
+        college.setCid(789);
+        college.setCollege("666");
 
         System.out.println(collegeController.insertCollege(college));
     }
@@ -261,29 +278,23 @@ class ExamsystemApplicationTests {
     @Test
     public void testUpdateCollege(){
         College college=new College();
-        college.setId(36);
-        college.setCid(789);
-        college.setCollege("456");
-        System.out.println(collegeController.updateCollegeById(college));
+        college.setId(54);
+        college.setCid(456);
+        college.setCollege("dududu");
+        college.setCollegeOld("456学院");
+        System.out.println(collegeController.updateById(college));
     }
 
     //测试删除学院
     @Test
     public void testDeleteCollege(){
-        College college1=new College();
-        College college2=new College();
-        College college3=new College();
 
-        college1.setId(35);
-//        college2.setId(34);
-//        college3.setId(23);
 
-        List<College> lists=new ArrayList<>();
-        lists.add(college1);
-//        lists.add(college2);
-//        lists.add(college3);
+        List<String> list=new ArrayList<>();
+        list.add("2");
+        list.add("说");
 
-        System.out.println(collegeController.deleteCollegeById(lists));
+        System.out.println(collegeController.deleteByName(list));
     }
 
     //测试查询所有surface
@@ -295,4 +306,19 @@ class ExamsystemApplicationTests {
             System.out.println(surface);
         }
     }
+
+
+    @Test
+    public void show(){
+        BloomFilter<Integer> bloomFilter=BloomFilter.create(Funnels.integerFunnel(),10,0.01);
+        bloomFilter.put(1);
+        bloomFilter.put(2);
+        bloomFilter.put(2);
+
+        if(bloomFilter.mightContain(2)){
+            System.out.println("cunzai");
+        }
+
+    }
+
 }

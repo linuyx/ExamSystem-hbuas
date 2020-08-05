@@ -6,7 +6,7 @@
 <mapper namespace="edu.hbuas.examsystem.mapper.TeacherMapper">
 
     <!--查询所有teacher-->
-    <select id="findAllTeacher" resultType="teacher">
+    <select id="selectAll" resultType="teacher">
         SELECT  tid,number,tname,sex,wages,phone,college,rname,times FROM  teacher,college,role
         WHERE
          teacher.cid=college.cid  and teacher.rid=role.rid
@@ -25,7 +25,7 @@
         select * from teacher
         where
         number=#{number} and tname=#{tname} and sex=#{sex} and wages=#{wages}
-        and phone=#{phone} and teacher.cid=#{cid} and rid=#{rid} and times=#{times}
+        and phone=#{phone} and cid=#{cid} and rid=#{rid}
         or number=#{number}
     </select>
 

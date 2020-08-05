@@ -1,25 +1,23 @@
 package edu.hbuas.examsystem.service;
 
 import edu.hbuas.examsystem.pojo.College;
-import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 public interface CollegeService {
 
     //查询所有college
-    List<College> findAllColege();
+    List<College> selectAll();
 
     //根据名称查找college
-    College findCollegeByName (String string);
+    College selectByName (String college);
 
     //批量删除college
-    String deleteCollegeById(List<College> lists);
+    String deleteByName(List<String> list);
 
     //保存college
     String insertCollege(College college);
 
     //修改college
-    String updateCollegeById(College college);
+    String updateById(College college);
 }
